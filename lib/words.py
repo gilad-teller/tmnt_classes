@@ -1,6 +1,5 @@
 import pronouncing
 import urllib
-import re
 
 from lib.constants import (
     BANNED_WORDS,
@@ -102,7 +101,7 @@ def getWordStresses(word: str):
     if not phones:
         # Hacky way of discarding candidate title
         return "1111111111"
-    
+
     stresses = pronouncing.stresses(phones[0])
     return stresses
 
